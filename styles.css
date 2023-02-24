@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+:root{
+    --prime: #00ff34;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+        width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+        background: white;
+}
+
+html::-webkit-scrollbar-thumb{
+        background: red;
+}
+
+
+body{
+    background-color: black;
+}
+
+section{
+    padding:5rem 11%;
+    
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:2rem 3rem;
+    padding-right: 3rem;
+    background: linear-gradient(130deg, rgb(41, 40, 40) 93%, transparent 90%);
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    background: whitesmoke;
+}
+
+.logo{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.navbar a{
+    display: inline-block;
+    padding:2.1rem 2rem/*1.5rem 2rem*/;
+    font-size:1.7rem;
+    color:gray;
+}
+
+.navbar a:hover{
+    background: blueviolet;
+}
+
+#menu-btn {
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+    display: none;
+} 
+
+.home{
+    padding: 0;
+    margin: 6.5rem;
+
+}
+
+.home .slide{
+    min-height: 70vh;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    padding:3rem 11%;
+    display: flex;
+    align-items: center;
+}
+
+.home .slide .content{
+    width: 60rem;
+
+}
+
+
+.JSM{
+    font-size: 3rem;
+    font-weight: 900;
+    display: block;
+    color: rgb(1, 1, 1);
+}
+
+.fearless {
+    font-size: 5rem;
+    display: block;
+    color: white;
+}
+
+.fearless strong{
+    font-size: 5rem;
+    display: block;
+    text-transform: uppercase;
+    color: red;
+    padding:1rem 0;
+}
+
+/*media queries*/
+
+@media (max-width:996px){/*991*/
+    
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:0 2rem;
+    }
+
+    section{
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width:718px){
+    
+    #menu-btn {
+        display:inline-block;
+    } 
+    
+    .header{
+        padding:1.2rem;
+    }
+    .navbar{
+        position:absolute;
+        top:99%; left:0; right:0;
+        background: whitesmoke;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+    }
+    .navbar a:hover{
+        background: blueviolet;
+    }
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 55%;
+    }
+}
